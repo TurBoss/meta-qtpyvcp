@@ -20,7 +20,7 @@ export STAGING_BINDIR_NATIVE
 export ARCHCMD="/bin/echo ${TARGET_ARCH}"
 
 DEPENDS = "readline eudev libmodbus libusb gtk+3 dpkg python-native python libxinerama boost glib-2.0 pkgconfig"
-# DEPENDS="tcl-native tk-native blt-native bwidget-native python-native tcl tk blt python xenomai pasm-native"
+DEPENDS="tcl-native tk-native python-native tcl tk python"
 
 RDEPENDS_${PN} = "boost-dev python-dev"
 
@@ -30,6 +30,8 @@ EXTRA_OECONF += "--disable-gtk"
 EXTRA_OECONF += "--with-python=${STAGING_BINDIR_NATIVE}/python-native/python"
 # EXTRA_OECONF += "--with-boost-python=${STAGING_BINDIR_NATIVE}/python-native/python"
 EXTRA_OECONF += "--with-boost=${STAGING_DIR_TARGET}/usr"
+EXTRA_OECONF += "--with-tclConfig=${STAGING_DIR_TARGET}/usr/lib/tk8.5/tkConfig.sh"
+EXTRA_OECONF += "--with-tclConfig=${STAGING_DIR_TARGET}/usr/lib/tcl8.5/tclConfig.sh"
 
 do_configure_prepend() {
   cd ${S}/src
