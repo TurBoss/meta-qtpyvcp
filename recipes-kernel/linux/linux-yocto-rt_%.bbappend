@@ -1,1 +1,1 @@
-COMPATIBLE_MACHINE = "genericx86-64"
+#COMPATIBLE_MACHINE = "genericx86-64"
