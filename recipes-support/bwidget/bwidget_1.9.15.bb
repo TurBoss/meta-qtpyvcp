@@ -23,4 +23,4 @@ do_install() {
     cp -r ${S}/* ${D}${libdir}/tcl8.6/${PN}-${PV}/
 }
 
-FILES_${PN} += "${libdir}/tcl8.6/bwidget-1.9.15/*"
+FILES_${PN} += "${libdir}/tcl8.6/${PN}-${PV}/*"
