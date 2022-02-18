@@ -10,8 +10,6 @@ SRC_URI[sha256sum] = "edcf580512170aba9ba6c55854e3b9ec6a11a3b08dcfb89bac99901971
 
 S = "${WORKDIR}/git"
 
-INSANE_SKIP_${PN} = "installed-vs-shipped"
-
 DEPENDS = 'tcl'
 
 do_configure[noexec] = "1"
@@ -23,4 +21,4 @@ do_install() {
     cp -r ${S}/* ${D}${libdir}/tcl8.6/${PN}-${PV}/
 }
 
-FILES_${PN} += "${libdir}/tcl8.6/${PN}-${PV}/*"
+FILES_${PN} += "/usr/lib/tcl8.6/${PN}-${PV}/*"
