@@ -4,11 +4,11 @@ LICENSE = "tcl"
 
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=af21afb4e406f3d8e15b91dd3fa0a978"
 
-SRC_URI = "https://downloads.sourceforge.net/project/tcllib/BWidget/1.9.15/BWidget-1.9.15.zip"
+SRC_URI = "git://github.com/TurBoss/bwidget.git;protocol=git;rev=master"
 
 SRC_URI[sha256sum] = "edcf580512170aba9ba6c55854e3b9ec6a11a3b08dcfb89bac99901971687c40"
 
-S = "${WORKDIR}/${PN}-${PV}"
+S = "${WORKDIR}/git"
 
 DEPENDS = 'tcl'
 
