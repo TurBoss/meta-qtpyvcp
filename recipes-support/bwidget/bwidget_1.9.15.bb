@@ -19,8 +19,6 @@ do_install() {
  	cd ${S}
     install -d ${D}${libdir}/tcl8.6/${PN}-${PV}/
     cp -r ${S}/* ${D}${libdir}/tcl8.6/${PN}-${PV}/
-} 
-
-do_package[noexec] = "1"
+}
 
 FILES_${PN} += "${libdir}/tcl8.6/bwidget-1.9.15/*"
