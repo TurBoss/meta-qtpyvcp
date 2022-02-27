@@ -14,6 +14,7 @@ DEPENDS = 'tcl'
 
 do_configure[noexec] = "1"
 do_compile[noexec] = "1"
+do_package[noexec] = "1"
 
 do_install() {
     install -d ${D}${libdir}/tcl8.6/${PN}-${PV}/
