@@ -21,7 +21,9 @@ do_install() {
     cp -r ${S}/* ${D}${libdir}/tcl8.6/${PN}-${PV}/
 }
 
-ILES_${PN} += "\
+PACKAGES = "${PN}"
+
+FILES_${PN} += "\
     ${libdir} \
     ${libdir}/tcl8.6/${PN}-${PV}/ \
 "
