@@ -22,4 +22,4 @@ do_install() {
 
 PACKAGES = "${PN}"
 
-FILES_${PN} += "${D}${libdir}/tcl8.6/${PN}-${PV}"
+FILES_${PN} = "${D}${libdir}/tcl8.6/${PN}-${PV}"
