@@ -10,16 +10,6 @@ SRC_URI[sha256sum] = "edcf580512170aba9ba6c55854e3b9ec6a11a3b08dcfb89bac99901971
 
 S = "${WORKDIR}/git"
 
-DEPENDS = 'tcl'
-
-do_configure[noexec] = "1"
-do_compile[noexec] = "1"
-
-do_install() {
-    install -d ${D}${libdir}/tcl8.6/${PN}-${PV}/
-    cp -r ${S}/* ${D}${libdir}/tcl8.6/${PN}-${PV}/
-}
-
 PACKAGES = "${PN}"
 
 FILES_${PN} += "\
@@ -165,4 +155,14 @@ FILES_${PN} += "\
   /usr/lib/tcl8.6/bwidget-1.9.15/demo/tree.tcl \
   /usr/lib/tcl8.6/bwidget-1.9.15/demo/tmpldlg.tcl \
   /usr/lib/tcl8.6/bwidget-1.9.15/demo/basic.tcl"
+DEPENDS = 'tcl'
+
+do_configure[noexec] = "1"
+do_compile[noexec] = "1"
+
+do_install() {
+    install -d ${D}${libdir}/tcl8.6/${PN}-${PV}/
+    cp -r ${S}/* ${D}${libdir}/tcl8.6/${PN}-${PV}/
+}
+
  
