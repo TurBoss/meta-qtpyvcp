@@ -16,9 +16,8 @@ do_configure[noexec] = "1"
 do_compile[noexec] = "1"
 
 do_install() {
- 	cd ${S}
-    install -d ${D}${libdir}/tcl8.6/${PN}-${PV}/
-    cp -r ${S}/* ${D}${libdir}/tcl8.6/${PN}-${PV}/
+    install -d ${libdir}/tcl8.6/${PN}-${PV}/
+    cp -r ${S}/* ${libdir}/tcl8.6/${PN}-${PV}/
 }
 
 PACKAGES = "${PN}"
